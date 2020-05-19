@@ -14,9 +14,9 @@
         wait: yes
         count: 1
         group: eshop
-        aws_access_key: "{{access_key}}"  
-        aws_secret_key: "{{secret_key}}"  
-        security_token: "{{session_token}}"
+        aws_access_key: "ASIAU5MKGCSV5J5WTHBO"  
+        aws_secret_key: "+yvNRuiPgzq98x0R8jCGMR+0urHSh8tcuKS8LCFa"  
+        security_token: "FwoGZXIvYXdzEKv//////////wEaDKsQl4HqphIzUufXViLJAe38yofSV64uYrkqSyDpi5ZRi0DI572hpkEOX6RV8d4PSF01lqAihQ4If4R42z/mMkAP9bG11KUGgiUOiwMM4Q1VD7kZmvK+YyF0x+xeoCpBqSoOOZ195e6jzwyGfYSoXdHCUp64dx58iq6wH0mQ/QJhuJ/kqhxhubmGEMD/JhwapWLLK8opMq67JevqDqGdDRFidfLOQClV4vJthY+qudqznNxGk2vt+qjGsFP+RwFDC3XRKAj0tvYMJgxglVTPy5ESG6vc0jzw5ii+6Yz2BTItwUkpuQls3ZyVFLxY3Jz7OwwBncJl/QaQF+8+qdiVxVeqhkQeHw/ioM03XT/l"
       register: ec2
       
     - name: Add instance host to group
@@ -47,7 +47,7 @@
     
     - name: Get project files from git
       git: 
-        repo: 'https://github.com/svam00/4IT572_docker.git'
+        repo: 'https://github.com/svam00/4IT572_project.git'
         dest: ./app
         
     - name: Build docker with eshop
