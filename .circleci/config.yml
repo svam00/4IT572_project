@@ -36,7 +36,8 @@ jobs:
           name: Deploy to production
           command: |
             . env/bin/activate
-            ansible-playbook ./ansible/ec2_deploy.yml --user ubuntu --key-file ../presentation.pem -e ansible_python_interpreter="/usr/bin/python3"
+            chmod 400 ./ansible/ansible_key.pem
+            ansible-playbook ./ansible/ec2_deploy.yml --user ubuntu --key-file ./ansible/ansible_key.pem -e ansible_python_interpreter="/usr/bin/python3"
             
             
 workflows:
