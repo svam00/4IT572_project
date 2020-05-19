@@ -56,7 +56,7 @@
     
     - name: Run docker with eshop
       shell: docker run -p 80:3000 myeshop
-      async: 120
+      async: 300
       poll: 10
       become: yes
       
