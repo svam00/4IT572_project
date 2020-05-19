@@ -38,7 +38,7 @@ jobs:
           command: |
             . env/bin/activate
             chmod 400 ./ansible/ansible_key.pem
-            ansible-playbook ./ansible/ec2_deploy.yml --user ubuntu --key-file ./ansible/ansible_key.pem -e ansible_python_interpreter="/usr/bin/python3"
+            ansible-playbook ./ansible/ec2_deploy.yml --user ubuntu --key-file ./ansible/ansible_key.pem
             
             
 workflows:
